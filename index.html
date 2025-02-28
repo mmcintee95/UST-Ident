@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UST-ID Pitch Presentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .slide-container {
+            width: 80%;
+            margin: auto;
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        button {
+            background-color: purple;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container active" id="slide1">
+        <h1>UST-ID: The Future of Student Identification</h1>
+        <p>Solving student and university ID challenges with innovation</p>
+        <button onclick="nextSlide(1)">Next</button>
+    </div>
+    <div class="slide-container" id="slide2">
+        <h2>The Problem: Student Challenges</h2>
+        <p>- Lost/Stolen ID cards cause inconvenience and fees</p>
+        <p>- Locked out of dorms, dining, and events</p>
+        <p>- Physical ID cards are fragile and outdated</p>
+        <button onclick="prevSlide(2)">Back</button>
+        <button onclick="nextSlide(2)">Next</button>
+    </div>
+    <div class="slide-container" id="slide3">
+        <h2>The Problem: University Challenges</h2>
+        <p>- Managing lost/stolen cards is costly</p>
+        <p>- Security risks from lost IDs</p>
+        <p>- Physical ID production is outdated & costly</p>
+        <button onclick="prevSlide(3)">Back</button>
+        <button onclick="nextSlide(3)">Next</button>
+    </div>
+    <div class="slide-container" id="slide4">
+        <h2>How UST-ID Works</h2>
+        <p>- Securely stores student IDs in a digital format</p>
+        <p>- Uses NFC/RFID for tap-to-access functionality</p>
+        <p>- Allows instant locking and unlocking of ID</p>
+        <button onclick="prevSlide(4)">Back</button>
+        <button onclick="nextSlide(4)">Next</button>
+    </div>
+    <div class="slide-container" id="slide5">
+        <h2>Thank You!</h2>
+        <p>Let's make UST-ID a reality. Questions?</p>
+        <button onclick="prevSlide(5)">Back</button>
+    </div>
+    <script>
+        let currentSlide = 1;
+        function nextSlide(slideNum) {
+            document.getElementById("slide" + slideNum).classList.remove("active");
+            document.getElementById("slide" + (slideNum + 1)).classList.add("active");
+        }
+        function prevSlide(slideNum) {
+            document.getElementById("slide" + slideNum).classList.remove("active");
+            document.getElementById("slide" + (slideNum - 1)).classList.add("active");
+        }
+    </script>
+</body>
+</html>
