@@ -17,6 +17,7 @@
             width: 80%;
             margin: auto;
             display: none;
+            animation: fadeIn 1s ease-in-out;
         }
         .active {
             display: block;
@@ -29,12 +30,23 @@
             cursor: pointer;
             margin: 10px;
         }
+        img {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
     <div class="slide-container active" id="slide1">
         <h1>UST-ID: The Future of Student Identification</h1>
         <p>Solving student and university ID challenges with innovation</p>
+        <img src="https://via.placeholder.com/600x300?text=UST-ID+Logo" alt="UST-ID Logo">
         <button onclick="nextSlide(1)">Next</button>
     </div>
     <div class="slide-container" id="slide2">
@@ -42,6 +54,7 @@
         <p>- Lost/Stolen ID cards cause inconvenience and fees</p>
         <p>- Locked out of dorms, dining, and events</p>
         <p>- Physical ID cards are fragile and outdated</p>
+        <img src="https://via.placeholder.com/600x300?text=Student+Challenges" alt="Student Challenges">
         <button onclick="prevSlide(2)">Back</button>
         <button onclick="nextSlide(2)">Next</button>
     </div>
@@ -50,6 +63,8 @@
         <p>- Managing lost/stolen cards is costly</p>
         <p>- Security risks from lost IDs</p>
         <p>- Physical ID production is outdated & costly</p>
+        <p>- No scalable, digital solution for ID management</p>
+        <img src="https://via.placeholder.com/600x300?text=University+Challenges" alt="University Challenges">
         <button onclick="prevSlide(3)">Back</button>
         <button onclick="nextSlide(3)">Next</button>
     </div>
@@ -58,12 +73,15 @@
         <p>- Securely stores student IDs in a digital format</p>
         <p>- Uses NFC/RFID for tap-to-access functionality</p>
         <p>- Allows instant locking and unlocking of ID</p>
+        <p>- Integrates with university systems for seamless use</p>
+        <img src="https://via.placeholder.com/600x300?text=How+It+Works" alt="How It Works">
         <button onclick="prevSlide(4)">Back</button>
         <button onclick="nextSlide(4)">Next</button>
     </div>
     <div class="slide-container" id="slide5">
         <h2>Thank You!</h2>
         <p>Let's make UST-ID a reality. Questions?</p>
+        <img src="https://via.placeholder.com/600x300?text=Thank+You" alt="Thank You">
         <button onclick="prevSlide(5)">Back</button>
     </div>
     <script>
